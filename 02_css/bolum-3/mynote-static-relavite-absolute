@@ -1,0 +1,15 @@
+Position
+Static-relative-fixed-absolute-sticky
+
+Static bir position değeri normal akış içerisinde hareket ettirilir ancak relative olduğunda içerisinde
+olduğu konumdan itibaren hareket ettirilir yani normal akışı bozma akışın dışına çıkma ancak akış içerisine o andaki pozisyon 
+neyse benn bunu dört köşeden hareket ettirebilirim diyoruz.
+
+Eğer bir nesneye Absolute verdiğimizde bu durumda akışın dışına çıkar akışın dışına çıktığı anda diğer elemanlar bu elemanı görmez ve sayfanın en üstüne yani body etiketine göre aslında buradaa konumlandırma yapıyoruz direk body etiketine yapışır ve ben bu konumdan itibaren nesneye top:50px left:50px diyerek hareket ettirebilirim neden çünkü kapsayıcı bir elemanı yok kapsayıcı elemanı şuanda body ve body in aslında özelliği position un relative olmsı yani relative aslında bağımlılık demek burda ve ben neye göre bağımlıyım şuanda body e göre yani absolute ancak relative ine body etiketine göre dolasıyla 50 e 50 body etiketi içerisine konumlanır.  
+
+
+my note
+
+position:static yaptığımızda top:50px verdiğimizde static olduğu için buelemanları dört köşedende hareket ettiremeyiz.
+position:relative olduğunda ise akış içerisinde olmaya devam ve olduğu konumdan itibaren hareket eder top:50px yaptığımızda 50px aşağıya gelir.
+position:absolute olduğunda normal akışın dışına çıkar ancak normal akışın dışına çıkması diğer elemanları görmezden gelmesine neden olmaz ama diğer elemanların onu görmezden gelmesine neden olur. Diğer elemanların bitiminden itibaren normal akış içerisinde kendine yer bulur. ve içerik kadar yer kaplar

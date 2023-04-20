@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p {
+        border: 2px solid red;      /*çerçeve yaptık*/
+        padding: 5px; /*yazılarla p etiketi arasıan bir mesafe koyduk*/
+      }
+      img {
+        width: 300px;
+        float: left; /*Yazıyı görselin hemen yanında başlatmak için*/
+        margin-right: 10px; /*yazı ile görsel arasına 10px lik bir boşluk bıraktık*/
+      }
+      .clearfix::after {    /*görseli çerçevenin içine alabildik */
+        content: "";
+        display: block;
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
+      necessitatibus quas ducimus ipsa soluta, ratione accusamus eveniet
+      temporibus doloremque at esse, iste unde vero qui repellendus asperiores
+      sunt debitis tenetur.
+    </p>
+
+    <p class="clearfix">
+      <img src="rowing.png" alt="" />
+      <span>
+        lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa ipsam
+        dolorum veniam maiores neque! Quos eligendi nobis assumenda fugiat
+        explicabo minus enim officiis, expedita incidunt maxime, id, nostrum
+        quia! Voluptate!</span
+      >
+    </p>
+  </body>
+</html>

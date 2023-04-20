@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- border-bottom ile altını çizgi çekip rengini ayarlayabiliriz
+    4 tarafının çizili olması için ise border yazılır
+    * özleliği bütün etiketlere uygulanması-->
+    <style>
+      * {
+        margin: 0;
+      }
+      body {
+        font-size: 15px;
+        margin-top: 10px;
+      }
+      section {
+        background-color: aquamarine;
+      }
+      .f20 {
+        font-size: 20px;
+      }
+      .f18 {
+        font-size: 18px;
+      }
+      #page-title {
+        color: yellowgreen;
+        border-bottom: 1px solid red;
+      }
+      #page-subtitle {
+        color: violet;
+        border: 2px solid black;
+      }
+      .text-white {
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section>
+        <h1 id="page-title" class="f20">Welcome To MovieApp</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste, sed.
+        </p>
+      </section>
+      <section>
+        <h1 id="page-subtitle" class="f18">How it works?</h1>
+      </section>
+      <section>
+        <h1 id="page-asubtitle" class="text-white">How it web?</h1>
+      </section>
+    </main>
+  </body>
+</html>

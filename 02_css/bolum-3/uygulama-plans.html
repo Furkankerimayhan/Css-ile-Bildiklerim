@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@400;700&family=Sono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Signika+Negative:wght@400;700&family=Sono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Sono", sans-serif;
+      }
+
+      #showcase {
+        background: url("home-bg.jpg");
+        background-position: center; /*Resmi tam ortaya koyar*/
+        height: 500px;
+        width: 100%;
+        padding: 10px;
+      }
+
+      .main-header {
+        background-color: #fc997c;
+        padding: 8px 16px;
+      }
+
+      .main-nav {
+        display: inline-block;
+        width: calc(100% - 114px);
+        text-align: right;
+        font-family: "Signika Negative", sans-serif;
+      }
+      .main-nav__items {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .main-nav__item {
+        display: inline-block;
+        margin: 0 10px;
+      }
+
+      .main-header__logo {
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 21px;
+      }
+
+      .main-nav__item a {
+        text-decoration: none;
+        color: #fff;
+      }
+
+      .main-nav__item a:hover,
+      .main-nav__item:hover::before {
+        color: #2e4c6d;
+      }
+
+      .main-nav__item:active::before,
+      .main-nav__item a:active {
+        color: #fff;
+      }
+
+      .main-nav__item::before {
+        content: "\2022";
+        color: #fff;
+      }
+      .main-nav__item--login a {
+        color: #fff;
+        background-color: chocolate;
+        padding: 4px 16px;
+        border-radius: 8px;
+        border: 2px solid #fff;
+      }
+      .main-nav__item--login a:hover {
+        color: chocolate;
+        border: 2px solid chocolate; /*solid : Düz çizgi oluşturmak için. none : Çerçeve olmaması için. veyahut çerçeve için*/
+        background-color: #fff;
+      }
+      .main-nav__item--login::before {
+        content: none;
+      }
+      #how-it-works {
+        padding: 10px;
+        text-align: center;
+      }
+      #how-it-works h2 {
+        color: #2e4c6d;
+        font-size: 30px;
+      }
+      .row {
+        margin-bottom: 40px; /*İki tane satır arasına 40 px lik boşluk ekledik*/
+      }
+      .col {
+        display: inline-block; /*Her eleman alt alata değilde yan yana gelicek*/
+        width: 30%; /*her paragraflar %30 luk yer kaplasın diye totalde 90 bize 10 luk yer kalır*/
+        padding: 16px; /*içerikle köşeler arasında boşluk bırakmak için*/
+        margin: 8px;
+      }
+      .col-2 {
+        display: inline-block;
+        width: calc(50% - 2px);
+        height: 350px;
+        background-color: brown;
+      }
+      .icon-box h3 {
+        color: #2e4c6d;
+        font-size: 26px;
+      }
+      .icon-box i {
+        color: brown;
+      }
+      .features__left {
+        background-image: url(home-bg2.jpg);
+        background-size: cover; /*çerçeveyi kapla demiş oluyoruz*/
+        background-position: top center;
+      }
+      .features__right {
+        background-color: #edf5f7;
+        padding: 40px;
+        vertical-align: top;
+      }
+      .features__right h3 {
+        font-size: 30px;
+      }
+      #features a {
+        background-color: #fc997c;
+        color: #fff;
+        padding: 7px 15px;
+        text-decoration: none;
+        font-size: 14px;
+        text-align: center;
+        border: 1px solid #fc997c;
+        border-radius: 3px;
+        display: inline-block;
+        margin-top: 15px;
+      }
+      #features a:hover {
+        border: 1px solid #fc997c;
+        color: #fc997c;
+        background-color: #fff;
+      }
+      .section-title {
+        text-align: center;
+      }
+      .plan {
+        background-color: #edf5f7;
+        text-align: center;
+        padding: 16px;
+        margin: 2px;
+        width: 32.9%;
+        height: 360px;
+        float: left;
+      }
+      .plan li {
+        font-family: "Roboto Slab", serif;
+      }
+      #clearfix::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+      .container {
+        margin: 0 auto;
+        width: 1000px;
+      }
+      .button {
+        margin: 100px;
+      }
+
+      .button1 {
+        margin: 10px;
+      }
+      .button2 {
+        margin: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="main-header">
+      <a href="#" class="main-header__logo">MovieApp</a>
+      <nav class="main-nav">
+        <ul class="main-nav__items">
+          <li class="main-nav__item">
+            <a href="#">Filmler</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#">Diziler</a>
+          </li>
+          <li class="main-nav__item main-nav__item--login">
+            <a href="#">Login</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="showcase">
+        <h1>Welcome to MovieApp</h1>
+      </section>
+      <section id="how-it-works">
+        <div class="row">
+          <h2>How it works?</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid,
+            deserunt?
+          </p>
+        </div>
+        <div class="row">
+          <div class="icon-box col">
+            <i class="fa-solid fa-right-to-bracket fa-2x"></i>
+            <h3>Register</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum esse
+              earum optio nostrum, similique eveniet?
+            </p>
+          </div>
+          <div class="icon-box col">
+            <i class="fa-brands fa-buffer fa-2x"></i>
+            <h3>Choose a Plan</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum esse
+              earum optio nostrum, similique eveniet?
+            </p>
+          </div>
+          <div class="icon-box col">
+            <i class="fa-solid fa-face-smile fa-2x"></i>
+            <h3>Enjoy Movies</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum esse
+              earum optio nostrum, similique eveniet?
+            </p>
+          </div>
+        </div>
+      </section>
+      <section id="features">
+        <div class="row">
+          <div class="col-2 features__left"></div><div class="col-2 features__right">
+            <h3>Watch all Movies & TV Shows once they get released!</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut
+              tenetur, esse cum vitae repudiandae facere facilis labore quas,
+              inventore atque molestias voluptatum corporis corrupti voluptates
+              maxime molestiae soluta dignissimos minus.
+            </p>
+            <a href="#">View Features</a>
+          </div>
+        </div>
+      </section>
+      <section class="plans">
+        <h2 class="section-title">Become a Premium Member</h2>
+        <div class="container clearfix">
+          <div class="plan">
+            <h2>Free</h2>
+            <h3>0/month</h3>
+            <ul>
+              <li>Watch on your phone & tablet</li>
+              <li>Download and watch offline</li>
+              <li>Screens you can watch</li>
+            </ul>
+            <div><button class="button">Choose Plan</button></div>
+          </div>
+          <div class="plan">
+            <h2>Recommended</h2>
+            <h2>Basic</h2>
+            <h3>$9.99/month</h3>
+            <ul>
+              <li>HD available</li>
+              <li>Unlimited Movies and TV Shows</li>
+              <li>Watch on your phone & tablet</li>
+              <li>Screens you can watch</li>
+              <li>First Month Free</li>
+            </ul>
+            <div><button class="button1">Choose Plan</button></div>
+          </div>
+          <div class="plan">
+            <h2>Premium</h2>
+            <h3>$19.99/month</h3>
+            <ul>
+              <li>HD available</li>
+              <li>Unlimited Movies and TV Shows</li>
+              <li>Watch on your phone & tablet</li>
+              <li>Download and watch offline</li>
+              <li>Screens you can watch</li>
+              <li>First Month Free</li>
+            </ul>
+            <div><button class="button2">Choose Plan</button></div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: #333;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+      .box {
+        background-color: yellow;
+        width: 150px;
+        height: 150px;
+        /*transition-property: background-color; /*burada hover özelliğinin etkilenmesini istiyoruz ve değiştirmek istediğimiz özelliğin ismini yazıyoruz sonra transition-duration: 2s; ile 2s bir yavaşlatma veriyoruz*/
+        /* transition-duration: 2s; */
+        /* transition-timing-function: ease-in-out; */
+        /* transition-timing-function: ease-in;  */
+        /*ease- yavaş başlayan, sonra hızlı, sonra yavaş biten bir geçiş efekti belirtir (bu varsayılandır)
+        linear- baştan sona aynı hızda bir geçiş efekti belirtir
+        ease-in- yavaş başlangıçlı bir geçiş efekti belirtir
+        ease-out- yavaş uçlu bir geçiş efekti belirtir
+        ease-in-out- yavaş başlangıçlı ve bitişli bir geçiş efekti belirtir
+        cubic-bezier(n,n,n,n)- kübik bezier işlevinde kendi değerlerinizi tanımlamanıza izin verir*/
+        /*transition: background-color 2s, border-radius 4s ease-in-out;     /*veya burada hepsini tanımlayabiliriz*/
+        transition: all 2s ease-in;     /*veya burada hepsi için aynı şeyi uygulayabiliriz*/
+
+      }
+      .box:hover {
+        background-color: red;
+        border-radius: 50%;
+        border: 5px solid #fff;
+        width: 300px;
+        height: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>

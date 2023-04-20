@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* Attribute selector */
+      /* a[target] {
+            background-color: red; /*target attributelerine göre etiketlerine ulaşabiliriz.*/ /*
+        }
+
+        [class] {
+            background-color: blue;  /* Görmüş olduğunuz gibi _blank olmasına gerek yok önemli olan attribute un olup olmaması önemli*//*
+        } */
+
+      /* Attribute value selector */
+
+      /* a[class="active"] {     /*a etiketindeki class ta active olanı yapmak istediğimizde *//*
+            background-color: blue;
+        }  */
+
+      /* Attribute '*' selector  */
+      /* [class*="active"] {  /* İçerisinde active geçen bütün etiketleri *= sayesinde çalıştırır activefurkan bile olas çalışır*//*
+            background-color: blue;
+        } */
+
+      /* Attribute '~' selector  */
+      /* [class~="active"] { /* burada ise active olanları çalıştırır activefurkan olursa veya active-furkan olursa çalışmaz*//*
+            background-color: blue;
+        } */
+
+      /* Attribute '|' selector */
+ 
+      /* [class|="active"] {      /*sadece ilk başta active olanları çalıştırır ve tek olması gerekir yani class="active-furkan" çalıştırır ama class="furkan active" i ve class="active furkan" i de çalıştırmaz*//*
+            background-color: blue;
+        } */
+
+      /* Attribute '^' selector  */ /*sadece ilk başta active olanları çalıştırır ve tek olması gerekmez yani class="active-furkan" class="active furkan" i çalıştırır ama class="furkan active" i çalıştırmaz*//*
+      /* [class^="active"] {
+            background-color: blue;
+        } */
+
+      /* Attribute '$' selector */
+      [class$="active"] {                  /*Burada ise sondakileri seçer yani class="furkan active" gibi*/
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <span class="text active">text</span>
+
+    <nav>
+      <a href="" target="_blank">home</a>
+      <a href="" class="active">about</a>
+      <a href="" class="link">contact</a>
+    </nav>
+  </body>
+</html>

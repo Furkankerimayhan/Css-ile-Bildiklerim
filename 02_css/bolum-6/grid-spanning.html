@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: grid;
+
+        grid-template-columns: repeat(6, 1fr);
+        gap: 10px; /*heryerden 10px boşluk verir*/
+        /*row-gap: 10px;    /*satırdan 10px boşluk verir*/
+        /* column-gap: 10px; */ /*dikeyde 10px boşluk verir*/
+        background-color: blue;
+      }
+
+      .item {
+        background-color: salmon;
+        padding: 20px;
+        margin: 20px;
+        color: #fff;
+        font-size: 25px;
+      }
+
+      .item:first-child {
+        /*grid-row-start: 1;     /*bir öğenin başlangıç satır pozisyonunu belirtir. Bu özellik, grid-row-end ile birlikte kullanılarak, bir öğenin satır konumunu belirlemek için kullanılır. Eğer grid-row-start belirtilmezse, öğe otomatik olarak bir sonraki boş satırda yerleştirilir.*/
+        /*grid-row-end: 3; */
+        /* grid-row: 1 / 3; */ /*bir öğenin satır konumunu hem başlangıç hem de bitiş satırıyla birlikte belirtir. Bu özellik, grid-row-start ve grid-row-end özelliklerinin kısaltmasıdır. grid-row özelliği, iki değerle birlikte kullanılır: ilk değer başlangıç satırını, ikinci değer ise bitiş satırını belirtir. Ayrıca, tek bir değerle de kullanılabilir ve bu durumda bu değer hem başlangıç hem de bitiş satırını belirtir.*/
+        /* grid-row: 1 / span 2; */ /*bir öğenin satır konumunu belirlerken, öğenin başlangıç satırı ve ne kadar satır süreceği span kelimesi ile belirtilir. Bu özellik grid-row-start ve grid-row-end özelliklerinin kısaltmasıdır ve daha az kod yazmaya izin verir.*/
+
+        /* grid-column-start: 2;    /*bir öğenin başlangıç sütun pozisyonunu belirtir. Bu özellik, grid-column-end özelliği ile birlikte kullanılarak, bir öğenin sütun konumunu belirlemek için kullanılır. Eğer grid-column-start belirtilmezse, öğe otomatik olarak bir sonraki boş sütunda yerleştirilir.*/
+        /*grid-column-end: 5;*/
+        /*grid-column: 2 / 5;*/ /*bir öğenin sütun konumunu hem başlangıç hem de bitiş sütunuyla birlikte belirtir. Bu özellik, grid-column-start ve grid-column-end özelliklerinin kısaltmasıdır. grid-column özelliği, iki değerle birlikte kullanılır: ilk değer başlangıç sütununu, ikinci değer ise bitiş sütununu belirtir. */
+        /* grid-column: 2 / span 3; */ /*bir öğenin sütun konumunu belirlerken, öğenin başlangıç sütunu ve ne kadar sütun süreceği span kelimesi ile belirtilir. Bu özellik, grid-column-start ve grid-column-end özelliklerinin kısaltmasıdır ve daha az kod yazmaya izin verir.*/
+
+        grid-area: 1 / 2 / span 3 / span 4; /* bir öğenin konumunu hem satır hem de sütun pozisyonları ile birlikte belirler. grid-row-start, grid-column-start, grid-row-end, ve grid-column-end özelliklerinin bir kısaltmasıdır. İlk iki değer, öğenin başlangıç satırı ve sütununu belirlerken, sonraki iki değer öğenin satır ve sütunların kaç tane süreceğini belirler. Örneğin, grid-area: 1 / 2 / span 3 / span 4; bir öğenin 1. satırdan başlayarak 3 satır boyunca, 2. sütundan başlayarak 4 sütun boyunca kaplayacağı anlamına gelir.*/
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item">item 1</div>
+      <div class="item">item 2</div>
+      <div class="item">item 3</div>
+      <div class="item">item 4</div>
+      <div class="item">item 1</div>
+      <div class="item">item 2</div>
+      <div class="item">item 3</div>
+      <div class="item">item 4</div>
+      <div class="item">item 1</div>
+      <div class="item">item 2</div>
+      <div class="item">item 3</div>
+      <div class="item">item 4</div>
+    </div>
+  </body>
+</html>

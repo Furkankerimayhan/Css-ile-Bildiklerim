@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      h2 {
+        margin: 0px;
+      }
+      header,
+      footer {
+        background-color: blueviolet;
+        color: chocolate;
+        padding: 15px;
+      }
+      .col {
+        float: left;
+        padding: 15px 15px 15px 0;
+      }
+      .menu {
+        color: white;
+        width: 25%;
+      }
+      .menu ul {
+        list-style-type: none;
+        margin: 0px;
+        padding: 0px;
+      }
+      .menu li {
+        background-color: rgb(113, 60, 163);
+        padding: 8px; /*li etiketindekilere 8px lik yükseklik */
+        margin-bottom: 8px; /*li etiketlerindekileri ayırdık*/
+      }
+      .menu li:hover {
+        border: 1px solid #ece7eb;
+        color: #f0e8f1;
+        background-color: rgb(126, 10, 116);
+      }
+      .content {
+        width: 75%;
+      }
+      .clearfix::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Header</h1>
+    </header>
+    <main class="clearfix">
+      <div class="menu col">
+        <ul>
+          <li>Html</li>
+          <li>Css</li>
+          <li>Javascript</li>
+        </ul>
+      </div>
+      <div class="content col">
+        <h2>Komple Web Geliştirme</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod cum ipsa
+          odit hic sed recusandae beatae harum ipsum iure, sint quo dolores
+          voluptas iste exercitationem tempora fugit suscipit obcaecati
+          corrupti!
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi ipsum
+          ipsam ex? Eveniet id voluptatibus neque temporibus esse autem
+          assumenda distinctio! Veritatis vitae voluptatum libero molestias illo
+          atque sunt distinctio.
+        </p>
+      </div>
+    </main>
+    <footer>
+      <h1>Footer</h1>
+    </footer>
+  </body>
+</html>

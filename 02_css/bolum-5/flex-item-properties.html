@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: flex;
+
+        height: 500px;
+        background-color: #034f84;
+      }
+      .item {
+        background-color: #f7786b;
+        padding: 30px;
+        margin: 20px;
+        color: #fff;
+        font-size: 25px;
+
+        /*flex-grow: 1;   /*değerine sahip ise kutuda boş alan kalmaz ve tüm öğelerin boyutları eşit olur. Ama bu eşdeğer içeriğe sahip öğeler için geçerlidir.*/
+        /*flex: 0 1 200px   /*grow shrink basis gibi özellikleri tek bir yerde verebiliyoruz*/
+      }
+      .item-1 {
+        flex: 25%;
+        order: 2; /*yerlerini değiştirebiliyoruz*/
+        /* flex-grow: 2;    */
+      }
+      .item-2 {
+        flex: 25%;
+        order: 3;
+        /* flex-grow: 1; */
+      }
+      .item-3 {
+        order: 1;
+        flex: 50%;
+        /*flex-basis: 200px; /*Öğelerin eğer alanı yetiyorsa olması gereken genişliği belirlemek için kullanılır.*/
+        /*flex-shrink: 0;     /*flex-shrink: özelliğine 0 verirsek yukarıda vermiş olduğumuz değerin altına hiç inmez ekranı küçültsek bile*/
+      }
+      /* .item-4{
+        flex-grow: 1;
+      } */
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item item-1">item 1</div>
+      <div class="item item-2">item 2</div>
+      <div class="item item-3">item 3</div>
+      <!-- <div class="item item-4">item 4</div> -->
+    </div>
+  </body>
+</html>

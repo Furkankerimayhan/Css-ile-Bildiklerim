@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #container {
+        /*text-align: right;*/
+        /*float: right;*/
+        background-color: burlywood; /*Sayfa üzerinde gösterilmez çünkü clear olayı oluşturmamız gerekiyor bir akış var ve biz o akışı bozduk bu durumu float uyguladığımızda sonradan gelen nesneler için düzeltiyor olmamız lazım */
+      }
+      .box {
+        width: 150px;
+        height: 150px;
+        background-color: red;
+        /*display: inline; /*inline elemanlar içerik kadar yerr kaplar*/
+        /*display: block; /*block eleman olarak kullandığımızda text-aling: right; özelliği kullanılmaz ama float right; özelliği kullanılabilir.*/
+        float: right; /*display inline özelliğini kaybeder*/
+      }
+      #box1 {
+        float: left;
+      }
+      .clearfix::after{    /*div etiketinden sonra content: ""; görünmeyen içerik ekliyoruz bu elemanı block olarak işaretliyoruz daha sonra cleat:both; diyerekte aşağıda yapmış olduğumuz işin aynısını yapmış oluyoruz. */
+        content: "";
+        display: block;
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container" class="clearfix">
+      <div class="box" id="box1">kutu1</div>
+      <div class="box">kutu2</div>
+      <div class="box">kutu3></div>
+      <!-- <div style="clear: both"></div> -->
+      <!--style="clear: both; diyerek float özelliğini kapatırız ve bu sayede background-color a verdiğimiz özellik özellik çalışır ve aşağıda p etiketine yazmış olduğumuz özellik div in altından çalışmaya başlar. eğer floatı sadece right tarafını kaldırmak istersek style="clear: right; aynı şekilde left olarakta yapabiliriz both hepsini kapsar-->
+    </div>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum odit
+      aperiam vero quidem aliquid. Exercitationem, similique perspiciatis.
+      Expedita soluta ut debitis autem sit laudantium, numquam fugit, dolorem
+      possimus quod a?
+    </p>
+  </body>
+</html>

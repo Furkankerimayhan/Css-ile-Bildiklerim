@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /*html,
+      body {
+        height: 100%;
+      }*/
+      body {
+        margin: 0;
+      }
+      #header {
+        position: relative;   /*absolute için kapsayıcı eleman burası olsun istediğimiz için*/
+        /*height: 50%; /*Buraya verilen 50% desteklenmiyor o yüzden html,body e 100% verdik artık desteklenitor ve konulan görsel veya color sayfayı yukarı aşağıya çeksekte sayfada her zaman 50% olarak kaplıyor amaç bu*/
+        height: 100vh; /*diyerek yukarıda html ve body ile yaptığımız işi burada onlarsız yapabiliyoruz buaradaa 100% demiş oluyoruz*/
+        /*width: 80vw; /*80% inin gözükmesini sağlıyoruz*/
+        
+      }
+      #header h1{
+        margin: 0;   /*Bunu verme sebebimiz yazdığımız yazı görseli aşağıya çekiyor margin ile 0 lıyoruz*/
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        font-size: 80px;
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header">
+      <h1>Background Text</h1>
+    </div>
+  </body>
+</html>

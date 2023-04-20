@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- en son atanan değer bir öncekini ezer fakat  id="" ile atanan değer ne zman yazılırsa yazılsın diğerlerini ezer ama aşağıdaki gibi h1 in içine style olarak atanan bir değer varsa id yi de ezer yani
+    style>id>class>h1 -- inline css>id selector>class selector>tag selector>browser defaults -->
+    <style>
+      #page-title {
+        color: green;
+      }
+      h1 {
+        color: red;
+      }
+      .f20 {
+        color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section>
+        <h1 id="page-title" class="f20" style="color: blue">
+          Welcome To MovieApp
+        </h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste, sed.
+        </p>
+      </section>
+      <section>
+        <h1 id="page-subtitle" class="f18">How it works?</h1>
+      </section>
+      <section>
+        <h1 id="page-asubtitle" class="text-white">How it web?</h1>
+      </section>
+    </main>
+  </body>
+</html>

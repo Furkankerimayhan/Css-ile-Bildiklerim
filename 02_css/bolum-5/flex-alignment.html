@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: flex;
+        flex-direction: column;   /*dikeyde kullanabilmek için*/
+
+        /*justify-content: center;     /*yatayda ortalarız*/
+        /*justify-content: flex-start;  /*sayfanın başına alabilriz*/
+        /*justify-content: flex-end;      /*sayfanın sonuna alabiliriz*/
+
+        /*justify-content: space-around;          /*esnek kutu içerisindeki öğeler kutuya ana-eksene göre ortalı bir şekilde sıralanır ve her esnek hat arasındaki boşluk ile en baştaki ve en sondaki hattın kapsayıcya olan boşluğun iki katıdır.*/
+
+        /*justify-content: space-between;        /*baştan ve sondan boşluk bırakmaz*/
+
+        /*justify-content: space-evenly;          /*bütün boşluklar eşit olur*/
+
+        /*align-items: stretch; /*esnek kutu modellerindeki öğelerin çapraz eksende nasıl hizalanacağını belirler. Bu özellik, öğelerin yüksekliklerinin doğal boyutlarını korumak yerine, öğelerin dikey olarak gerilmesine neden olur ve tüm öğelerin çapraz eksen boyunca eşit uzunlukta olmasını sağlar.*/
+
+        /*align-items: flex-end;        /*en alta gelirler*/ /*en alt ortaya gelmesini istiyorsak justify-content: center; ile birlikte kullanılır*/
+        /*align-items: center;             /*tam ortaya gelir*/ /*yatayda ve dikeyede tam ortaya yani sayfanın tam oertasına denk gelmesini istiyorsak justify-content: center; ile birlikte kullanırız. */
+
+
+        align-items: flex-start;
+        justify-content: space-evenly;  /*aralarına boşluk koyduk*/
+
+        height: 500px;
+        background-color: #034f84;
+        /* padding: 15px; */
+      }
+      .item {
+        background-color: #f7786b;
+        padding: 30px;
+        margin: 20px;
+        color: #fff;
+        font-size: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item">item 1</div>
+      <div class="item">item 2</div>
+      <div class="item">item 3</div>
+      <div class="item">item 4</div>
+    </div>
+  </body>
+</html>

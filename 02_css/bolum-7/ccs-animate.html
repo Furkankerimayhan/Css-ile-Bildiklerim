@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #333;
+
+        }
+        .box{
+            background-color: yellow;
+            width: 150px;
+            height: 150px;
+
+            /*animation-name: a1;
+            animation-duration: 5s;  /*animasyonun saniyesini veriyoruz*/
+            /*animation-iteration-count: 2s;   /*kaç kere tekrar etmesini söylüyoruz*/
+            /*animation-iteration-count: infinite;      /*sonsuz olarak dönmesi için*/
+            /*animation-fill-mode: forwards;      /*animasyon hareket eder ve bittikten sonra bittiği yerde kalır eski haline gelmez*/
+            /*animation-delay: 2s;      /*2 saniye bekler ve sonra animasyon oynar*/
+            /*animation-direction: alternate-reverse;    /*animasyon geldiği gibi gider*/
+            /*animation-timing-function: ease-in;         /*animasyon yavaş başlayıp hızlı biter*/
+
+            animation: a1 5s forwards 2s ease-in;   /*bunları tek bir yerden yapmak için*/
+        }
+
+        @keyframes a1{
+            to{
+                width: 500px;   /*500px yatayda hareket edecek*/
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

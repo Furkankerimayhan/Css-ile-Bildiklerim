@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      a {
+        border: 1px solid green;
+        padding: 5px 8px;
+        display: inline-block;
+        text-decoration: none;
+        width: 60px;
+        text-align: center;
+      }
+      a:link {
+        color: black; /*ziyaret etmeden önceki renk*/
+      }
+      a:visited {
+        color: blue; /*ziyaret ettikten sonra yazı maviye döner*/
+      }
+      a:hover {
+        color: aliceblue; /*Mouse ile üstüne geldiğimiz zaman yazı aliceblue zemin ise brown olur*/
+        background-color: brown;
+      }
+      a:active {
+        /*Mouse ile basarken/basılı tutarken yazı aliceblue zemin ise yellow olur */
+        color: aliceblue;
+        background-color: yellow;
+      }
+      div:hover p {
+        /*Üzerine geldiğimiz zaman p içerisindeki içerik gözükür*/
+        display: block;
+      }
+      p {
+        display: none; /* etiket içerisindeki yer gösterilmez*/
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Pseudo classes -->
+    <a href="borders.html">Home</a>
+    <a href="box-model.html">Products</a>
+    <a href="combinators.html">About</a>
+    <br /><br />
+    <div>
+      Click here!
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut
+        necessitatibus aspernatur quasi expedita similique nemo. Aliquid ad
+        ullam odit officia vel, reiciendis exercitationem dolores expedita atque
+        molestias dolor aut quod.
+      </p>
+    </div>
+  </body>
+</html>

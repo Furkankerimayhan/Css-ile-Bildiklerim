@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p::first-line {
+        /*ilk satırına etki eder pencereyi küçültüm büyütsek bike ilk satırda ne kalıyorsa ona etki eder*/
+        font-weight: bold; /*ilk satırı kalınlaştırır*/
+        color: aqua;
+        word-spacing: 2px; /*ilk satırda Kelimeler arasında istediğiniz px lik genişlik bırakmak için*/
+        letter-spacing: 1px; /*ilk satırda Harfler arasında istediğiniz px lik genişlik bırakmak için*/
+      }
+      p.about::first-line {
+        color: blue;
+      }
+      p::first-letter {
+        font-size: 48px; /*İlk karaktere etki eder*/
+      }
+      ::selection {
+        /*Bütün sayfa için ama p::selection demiş olsaydık sadece p içindekiler için geçerli olurdu*/
+        background-color: yellow; /*Mouse ile seçilen ilgili yerin zemin rengi değişir*/
+      }
+      p::after {
+        /*paragrafların sonuna konulması istenen etiketler eklenir*/
+        /*Bunun gibi emojiler için w3 teki html emoji kısmında bulabiliriz. Oradaki \Hex kodları ile eklenir*/
+        content: "\2615";
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Pseudo classes -->
+    <!-- Pseudo elements -->
+    <!-- + reference diye arattığımızda daha fazla seçenek bulabiliriz-->
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque consectetur
+      suscipit autem rem perspiciatis laborum ullam, totam, atque fugit aperiam
+      nisi quis. Quae minus quam sit, beatae ut nostrum. Laboriosam.
+    </p>
+    <p class="about">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem, dolore
+      similique dolores optio sapiente earum officia sequi id tempore voluptatem
+      necessitatibus illum voluptates sunt eaque neque mollitia fugiat impedit
+      a.
+    </p>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #container {
+        /*text-align: right;*/
+        /*float: right;*/
+        background-color: burlywood; /*Sayfa üzerinde gösterilmez çünkü clear olayı oluşturmamız gerekiyor bir akış var ve biz o akışı bozduk bu durumu float uyguladığımızda sonradan gelen nesneler için düzeltiyor olmamız lazım */
+      }
+      .box {
+        width: 150px;
+        height: 150px;
+        background-color: red;
+        display: inline; /*inline elemanlar içerik kadar yerr kaplar*/
+        /*display: block; /*block eleman olarak kullandığımızda text-aling: right; özelliği kullanılmaz ama float right; özelliği kullanılabilir.*/
+        float: right; /*display inline özelliğini kaybeder*/
+      }
+      #box1 {
+        float: left;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div class="box" id="box1">kutu1</div>
+      <div class="box">kutu2</div>
+      <div class="box">kutu3></div>
+    </div>
+  </body>
+</html>
